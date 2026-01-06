@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Dragon Snake Trade - AI Trading Platform</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <meta name="description" content="Advanced AI-powered trading platform with real-time charts, automated trading, and multi-asset support. Owner: Olawale Abdul-Ganiyu Embade">
+    <meta name="keywords" content="trading, crypto, forex, AI trading, automated trading, investment">
+    <meta name="author" content="Olawale Abdul-Ganiyu Embade">
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="logo-animation">🐉🐍</div>
+            <h1 class="loading-title">Trade Dragon Snake Trade</h1>
+            <p class="loading-text">Loading your trading experience...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-icon">🐉🐍</span>
+                <span class="logo-text">Trade Dragon Snake Trade</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#trading" class="nav-link">Trading</a>
+                <a href="#dashboard" class="nav-link">Dashboard</a>
+                <a href="#wallet" class="nav-link">Wallet</a>
+                <a href="#settings" class="nav-link">Settings</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn btn-outline" onclick="showLoginModal()">Login</button>
+                <button class="btn btn-primary" onclick="showRegisterModal()">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <!-- Hero -->
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Trade Dragon Snake Trade</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Advanced AI-powered trading platform with real-time charts, automated trading bots, and multi-asset support including crypto, forex, and natural resources.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large" onclick="navigateTo('#trading')">
+                            Start Trading Now
+                        </button>
+                        <button class="btn btn-outline btn-large" onclick="showDemo()">
+                            Try Demo
+                        </button>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number gradient-text">500+</div>
+                            <div class="stat-label">Trading Pairs</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number gradient-text">100M+</div>
+                            <div class="stat-label">Daily Volume</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number gradient-text">50K+</div>
+                            <div class="stat-label">Active Users</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number gradient-text">99.9%</div>
+                            <div class="stat-label">Uptime</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features">
+                <h2 class="section-title">Powerful Trading Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3 class="feature-title">AI Trading Bot</h3>
+                        <p class="feature-description">Advanced AI algorithms analyze market trends and execute trades automatically with high precision.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3 class="feature-title">Real-Time Charts</h3>
+                        <p class="feature-description">Professional TradingView charts with multiple timeframes and technical indicators.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3 class="feature-title">Lightning Fast</h3>
+                        <p class="feature-description">Execute trades in milliseconds with our low-latency trading engine.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💰</div>
+                        <h3 class="feature-title">Multi-Asset Trading</h3>
+                        <p class="feature-description">Trade crypto, forex, commodities, and natural resources from a single platform.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3 class="feature-title">Bank-Level Security</h3>
+                        <p class="feature-description">Your funds are protected with multi-layer security including 2FA and cold storage.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📱</div>
+                        <h3 class="feature-title">Cross-Platform</h3>
+                        <p class="feature-description">Access your account on web, mobile (Android), and desktop (Windows).</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="cta-section">
+                <div class="cta-card">
+                    <h2 class="cta-title">Ready to Start Trading?</h2>
+                    <p class="cta-description">Join thousands of traders who trust Trade Dragon Snake Trade for their investment needs.</p>
+                    <button class="btn btn-primary btn-large" onclick="showRegisterModal()">
+                        Create Free Account
+                    </button>
+                    <p class="cta-note">Minimum deposit: ₦100 • No hidden fees • 24/7 support</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trading Section -->
+        <section id="trading" class="section">
+            <div class="trading-container">
+                <!-- Trading Pairs Sidebar -->
+                <div class="trading-sidebar">
+                    <h3 class="sidebar-title">Trading Pairs</h3>
+                    <div class="trading-pairs-list" id="tradingPairsList">
+                        <!-- Trading pairs will be loaded here -->
+                    </div>
+                </div>
+
+                <!-- Main Trading Area -->
+                <div class="trading-main">
+                    <!-- Chart Header -->
+                    <div class="chart-header">
+                        <div class="chart-info">
+                            <h2 class="chart-title" id="chartTitle">BTC/USDT</h2>
+                            <div class="chart-price">
+                                <span class="price-value" id="currentPrice">$43,250.00</span>
+                                <span class="price-change profit" id="priceChange">+2.45%</span>
+                            </div>
+                        </div>
+                        <div class="chart-timeframes">
+                            <button class="timeframe-btn active" data-timeframe="1m">1m</button>
+                            <button class="timeframe-btn" data-timeframe="5m">5m</button>
+                            <button class="timeframe-btn" data-timeframe="15m">15m</button>
+                            <button class="timeframe-btn" data-timeframe="1h">1h</button>
+                            <button class="timeframe-btn" data-timeframe="4h">4h</button>
+                            <button class="timeframe-btn" data-timeframe="1d">1d</button>
+                        </div>
+                    </div>
+
+                    <!-- Chart Container -->
+                    <div class="chart-container">
+                        <canvas id="tradingChart"></canvas>
+                    </div>
+
+                    <!-- Open Positions -->
+                    <div class="positions-section">
+                        <h3 class="section-header">Open Positions</h3>
+                        <div class="positions-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Pair</th>
+                                        <th>Type</th>
+                                        <th>Size</th>
+                                        <th>Entry</th>
+                                        <th>Current</th>
+                                        <th>P&L</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="positionsTableBody">
+                                    <!-- Positions will be loaded here -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trade Execution Panel -->
+                <div class="trading-panel">
+                    <h3 class="panel-title">Place Order</h3>
+                    
+                    <!-- Long/Short Toggle -->
+                    <div class="position-toggle">
+                        <button class="toggle-btn active" id="longBtn" onclick="setPositionType('long')">
+                            <span>🟢</span> Long
+                        </button>
+                        <button class="toggle-btn" id="shortBtn" onclick="setPositionType('short')">
+                            <span>🔴</span> Short
+                        </button>
+                    </div>
+
+                    <!-- Order Type -->
+                    <div class="form-group">
+                        <label class="form-label">Order Type</label>
+                        <select class="form-select" id="orderType">
+                            <option value="MARKET">Market</option>
+                            <option value="LIMIT">Limit</option>
+                            <option value="STOP">Stop</option>
+                        </select>
+                    </div>
+
+                    <!-- Lot Size -->
+                    <div class="form-group">
+                        <label class="form-label">Lot Size (0.01 - 50)</label>
+                        <input type="number" class="form-input" id="lotSize" value="0.01" min="0.01" max="50" step="0.01">
+                        <div class="lot-presets">
+                            <button class="preset-btn" onclick="setLotSize(0.01)">0.01</button>
+                            <button class="preset-btn" onclick="setLotSize(0.1)">0.1</button>
+                            <button class="preset-btn" onclick="setLotSize(1)">1</button>
+                            <button class="preset-btn" onclick="setLotSize(10)">10</button>
+                        </div>
+                    </div>
+
+                    <!-- Leverage -->
+                    <div class="form-group">
+                        <label class="form-label">Leverage: <span id="leverageValue">10</span>x</label>
+                        <input type="range" class="form-range" id="leverage" min="1" max="100" value="10">
+                        <div class="range-labels">
+                            <span>1x</span>
+                            <span>50x</span>
+                            <span>100x</span>
+                        </div>
+                    </div>
+
+                    <!-- Stop Loss -->
+                    <div class="form-group">
+                        <label class="form-label">Stop Loss (Optional)</label>
+                        <input type="number" class="form-input" id="stopLoss" placeholder="Price">
+                    </div>
+
+                    <!-- Take Profit -->
+                    <div class="form-group">
+                        <label class="form-label">Take Profit (Optional)</label>
+                        <input type="number" class="form-input" id="takeProfit" placeholder="Price">
+                    </div>
+
+                    <!-- Position Summary -->
+                    <div class="position-summary">
+                        <div class="summary-row">
+                            <span>Position Value</span>
+                            <span id="positionValue">$432.50</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Margin Required</span>
+                            <span id="marginRequired">$43.25</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Fees</span>
+                            <span id="fees">$0.17</span>
+                        </div>
+                    </div>
+
+                    <!-- AI Trading Bot -->
+                    <div class="ai-bot-toggle">
+                        <div class="ai-bot-info">
+                            <div class="ai-bot-title">AI Trading Bot</div>
+                            <div class="ai-bot-description">Auto-execute trades</div>
+                        </div>
+                        <button class="toggle-switch" id="aiBotToggle" onclick="toggleAIBot()">
+                            <span class="toggle-slider"></span>
+                        </button>
+                    </div>
+
+                    <!-- Execute Button -->
+                    <button class="btn btn-trade btn-long" id="executeTradeBtn" onclick="executeTrade()">
+                        🟢 Buy / Long
+                    </button>
+
+                    <p class="risk-warning">
+                        ⚠️ Trading involves risk. Only trade with funds you can afford to lose.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dashboard Section -->
+        <section id="dashboard" class="section">
+            <div class="dashboard-container">
+                <!-- Balance Cards -->
+                <div class="balance-cards">
+                    <div class="balance-card">
+                        <div class="balance-label">Total Balance</div>
+                        <div class="balance-value gradient-text">$12,450.00</div>
+                        <div class="balance-change profit">+$1,250.00 (11.2%)</div>
+                    </div>
+                    <div class="balance-card">
+                        <div class="balance-label">Trading Profits</div>
+                        <div class="balance-value profit">$3,200.00</div>
+                        <div class="balance-change profit">+$450.00 (16.4%)</div>
+                    </div>
+                    <div class="balance-card">
+                        <div class="balance-label">Available Balance</div>
+                        <div class="balance-value">$9,250.00</div>
+                        <div class="balance-change neutral">Ready to trade</div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Overview -->
+                <div class="portfolio-section">
+                    <h3 class="section-header">Portfolio Overview</h3>
+                    <div class="portfolio-chart">
+                        <canvas id="portfolioChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Recent Trades -->
+                <div class="trades-section">
+                    <h3 class="section-header">Recent Trades</h3>
+                    <div class="trades-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Pair</th>
+                                    <th>Type</th>
+                                    <th>Amount</th>
+                                    <th>Price</th>
+                                    <th>P&L</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tradesTableBody">
+                                <!-- Trades will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wallet Section -->
+        <section id="wallet" class="section">
+            <div class="wallet-container">
+                <!-- Wallet Balance -->
+                <div class="wallet-balance">
+                    <h2 class="wallet-title">Wallet Balance</h2>
+                    <div class="balance-amount gradient-text">$12,450.00</div>
+                    <div class="wallet-actions">
+                        <button class="btn btn-primary" onclick="showDepositModal()">
+                            <span>💳</span> Deposit
+                        </button>
+                        <button class="btn btn-outline" onclick="showWithdrawModal()">
+                            <span>💰</span> Withdraw
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Deposit Methods -->
+                <div class="deposit-methods">
+                    <h3 class="section-header">Deposit Methods</h3>
+                    <div class="methods-grid">
+                        <div class="method-card">
+                            <div class="method-icon">💳</div>
+                            <div class="method-name">Debit/Credit Card</div>
+                            <div class="method-info">Instant • Min ₦100</div>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">🅿️</div>
+                            <div class="method-name">PayPal</div>
+                            <div class="method-info">Instant • Min ₦500</div>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">₿</div>
+                            <div class="method-name">Crypto</div>
+                            <div class="method-info">1-2 hours • Min ₦1,000</div>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">🏦</div>
+                            <div class="method-name">Bank Transfer</div>
+                            <div class="method-info">1-3 days • Min ₦100</div>
+                        </div>
+                        <div class="method-card">
+                            <div class="method-icon">🎫</div>
+                            <div class="method-name">Gift Card</div>
+                            <div class="method-info">Instant • Min ₦500</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transaction History -->
+                <div class="transactions-section">
+                    <h3 class="section-header">Transaction History</h3>
+                    <div class="transactions-list">
+                        <div class="transaction-item">
+                            <div class="transaction-icon success">✓</div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Deposit via Bank Transfer</div>
+                                <div class="transaction-date">Today, 10:30 AM</div>
+                            </div>
+                            <div class="transaction-amount success">+$5,000.00</div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon success">✓</div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Trading Profit - BTC/USDT</div>
+                                <div class="transaction-date">Today, 9:15 AM</div>
+                            </div>
+                            <div class="transaction-amount success">+$350.00</div>
+                        </div>
+                        <div class="transaction-item">
+                            <div class="transaction-icon pending">⏳</div>
+                            <div class="transaction-details">
+                                <div class="transaction-title">Withdrawal to PayPal</div>
+                                <div class="transaction-date">Yesterday, 3:45 PM</div>
+                            </div>
+                            <div class="transaction-amount pending">-$1,200.00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section id="settings" class="section">
+            <div class="settings-container">
+                <h2 class="settings-title">Settings</h2>
+                
+                <!-- Profile Settings -->
+                <div class="settings-section">
+                    <h3 class="settings-header">Profile Settings</h3>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" value="user@example.com" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-input" value="+1 234 567 8900">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Country</label>
+                            <select class="form-select">
+                                <option value="US">United States</option>
+                                <option value="NG">Nigeria</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="CA">Canada</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+                </div>
+
+                <!-- Security Settings -->
+                <div class="settings-section">
+                    <h3 class="settings-header">Security</h3>
+                    <div class="security-options">
+                        <div class="security-option">
+                            <div class="security-info">
+                                <div class="security-title">Two-Factor Authentication</div>
+                                <div class="security-description">Add an extra layer of security</div>
+                            </div>
+                            <button class="toggle-switch active">
+                                <span class="toggle-slider"></span>
+                            </button>
+                        </div>
+                        <div class="security-option">
+                            <div class="security-info">
+                                <div class="security-title">Email Notifications</div>
+                                <div class="security-description">Receive security alerts</div>
+                            </div>
+                            <button class="toggle-switch active">
+                                <span class="toggle-slider"></span>
+                            </button>
+                        </div>
+                        <button class="btn btn-outline">Change Password</button>
+                    </div>
+                </div>
+
+                <!-- Trading Preferences -->
+                <div class="settings-section">
+                    <h3 class="settings-header">Trading Preferences</h3>
+                    <div class="settings-form">
+                        <div class="form-group">
+                            <label class="form-label">Default Leverage</label>
+                            <select class="form-select">
+                                <option value="1">1x</option>
+                                <option value="5">5x</option>
+                                <option value="10" selected>10x</option>
+                                <option value="20">20x</option>
+                                <option value="50">50x</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Default Currency</label>
+                            <select class="form-select">
+                                <option value="USD" selected>USD</option>
+                                <option value="NGN">NGN</option>
+                                <option value="EUR">EUR</option>
+                                <option value="GBP">GBP</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary">Save Preferences</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <span class="logo-icon">🐉🐍</span>
+                    <span class="logo-text">Trade Dragon Snake Trade</span>
+                </div>
+                <p class="footer-description">Advanced AI-powered trading platform for the modern trader.</p>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Products</h4>
+                <a href="#trading" class="footer-link">Markets</a>
+                <a href="#trading" class="footer-link">Trading</a>
+                <a href="#trading" class="footer-link">AI Bot</a>
+                <a href="#wallet" class="footer-link">Wallet</a>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Company</h4>
+                <a href="#" class="footer-link">About Us</a>
+                <a href="#" class="footer-link">Careers</a>
+                <a href="#" class="footer-link">Contact</a>
+                <a href="#" class="footer-link">Blog</a>
+            </div>
+            <div class="footer-section">
+                <h4 class="footer-title">Legal</h4>
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Risk Disclaimer</a>
+                <a href="#" class="footer-link">AML Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Trade Dragon Snake Trade. Owner: Olawale Abdul-Ganiyu Embade. All rights reserved.</p>
+            <p>Licensed and regulated for real trading operations.</p>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('loginModal')">&times;</button>
+            <h2 class="modal-title">Login</h2>
+            <form class="modal-form" onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Login</button>
+                <div class="modal-footer">
+                    <a href="#" class="modal-link">Forgot Password?</a>
+                    <span class="modal-divider">|</span>
+                    <a href="#" class="modal-link" onclick="closeModal('loginModal'); showRegisterModal();">Create Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('registerModal')">&times;</button>
+            <h2 class="modal-title">Create Account</h2>
+            <form class="modal-form" onsubmit="handleRegister(event)">
+                <div class="form-group">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Country</label>
+                    <select class="form-select" required>
+                        <option value="">Select Country</option>
+                        <option value="US">United States</option>
+                        <option value="NG">Nigeria</option>
+                        <option value="GB">United Kingdom</option>
+                        <option value="CA">Canada</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Create Account</button>
+                <div class="modal-footer">
+                    <a href="#" class="modal-link" onclick="closeModal('registerModal'); showLoginModal();">Already have an account?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/trading.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>
